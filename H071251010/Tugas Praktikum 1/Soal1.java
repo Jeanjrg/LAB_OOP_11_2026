@@ -15,7 +15,11 @@ public class Soal1 {
 
             char awal = Character.toUpperCase(k.charAt(0));
 
-            String sisa = k.substring(1);
+            String sisa = "";
+
+            if (k.length() > 1) {
+                sisa = k.substring(1);
+            }
 
             hasil = hasil + awal + sisa;
 
@@ -36,8 +40,11 @@ public class Soal1 {
         System.out.print("Masukkan Judul Film: ");
         String teks = input.nextLine();
 
-        String hasil = kapitalAwal(teks);
-
-        System.out.println("Hasil: " + hasil);
+        if (teks.isEmpty()) {
+            System.out.println("Input tidak boleh kosong");
+        } else {
+            String hasil = kapitalAwal(teks);
+            System.out.println("Hasil: " + hasil);
+        }
     }
 }

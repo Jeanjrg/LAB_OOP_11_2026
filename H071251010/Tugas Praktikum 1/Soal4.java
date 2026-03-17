@@ -16,13 +16,23 @@ public class Soal4 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Input: ");
-        int angka = input.nextInt();
+        try {
+            System.out.print("Input: ");
+            int angka = input.nextInt();
 
-        BigInteger n = BigInteger.valueOf(angka);
+            if (angka < 0) {
+                System.out.println("Tidak boleh bilangan negatif");
+                return;
+            }
 
-        BigInteger hasil = faktorial(n);
+            BigInteger n = BigInteger.valueOf(angka);
 
-        System.out.println("Output: " + hasil);
+            BigInteger hasil = faktorial(n);
+
+            System.out.println("Output: " + hasil);
+
+        } catch (Exception e) {
+            System.out.println("Input harus berupa angka");
+        }
     }
 }

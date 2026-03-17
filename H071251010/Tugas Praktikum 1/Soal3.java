@@ -9,6 +9,11 @@ public class Soal3 {
         System.out.print("Masukkan password: ");
         String password = input.nextLine();
 
+        if (password.isEmpty()) {
+            System.out.println("Password tidak boleh kosong");
+            return;
+        }
+
         boolean adaBesar = false;
         boolean adaKecil = false;
         boolean adaAngka = false;
