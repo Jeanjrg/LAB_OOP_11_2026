@@ -1,4 +1,4 @@
-package tuprak1;
+package TP1;
 
 import java.util.Scanner;
 
